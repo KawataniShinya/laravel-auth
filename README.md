@@ -23,10 +23,11 @@ docker-compose ps
 3. 初期設定(アプリケーション環境)
 ```shell
 docker-compose exec app bash
-npm install
-npm run build
+composer install
 cp -p /var/www/app/.env.auth /var/www/app/.env
 php artisan key:generate
+npm install
+npm run build
 exit
 ```
 
